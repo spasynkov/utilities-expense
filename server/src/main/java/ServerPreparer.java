@@ -71,7 +71,7 @@ public class ServerPreparer {
                 * postgresql: jdbc:postgresql://localhost:5432?useSSL=false
                 * */
                 connection = DriverManager.getConnection(
-                        dbConnectionString.append(noSSL).toString(),
+                        dbConnectionString.append("/").append((dbType.equals(postgresql) ? "postgres" : "")).append(noSSL).toString(),
                         dbRootUserName,
                         consoleReader.readLine());
                 System.out.println("Connected successfully!");
@@ -210,9 +210,7 @@ public class ServerPreparer {
         properties.setProperty("dbPass", dbPassword);
         properties.setProperty("JDBCDriver", driverClassName);
         // Storing properties
-        FileOutputStream outputStream;
-        try {
-            outputStream = new FileOutputStream(settingsPath);
+        try (FileOutputStream outputStream = new FileOutputStream(settingsPath);) {
             properties.store(outputStream, null);
         } catch (IOException e) {
             e.printStackTrace();
