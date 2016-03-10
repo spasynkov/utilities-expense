@@ -1,5 +1,7 @@
+.gitignore
 **/.idea
 **/target
 **/out
-*~
-*.iws
+**/*~
+**/*.iws
+**/*.iml
