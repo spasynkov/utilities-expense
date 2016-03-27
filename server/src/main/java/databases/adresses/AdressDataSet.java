@@ -3,9 +3,9 @@ package databases.adresses;
 
 public class AdressDataSet {
 
-    private int id;
+    private Integer id;
     private String country;
-    private int index;
+    private Integer index;
     private String region;
     private String city;
     private String street;
@@ -24,6 +24,12 @@ public class AdressDataSet {
         this.flat = flat;
     }
 
+    public AdressDataSet(){}
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }
@@ -40,7 +46,7 @@ public class AdressDataSet {
         return index;
     }
 
-    public void setIndex(int index) {
+    public void setIndex(Integer index) {
         this.index = index;
     }
 

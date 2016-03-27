@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class UserDataSet {
 
-    private int id;
+    private Integer id;
     private String username;
     private String password;
     private String realname;
@@ -23,14 +23,20 @@ public class UserDataSet {
         this.date = date;
     }
 
+    public UserDataSet(){}
+
     /*создал только геттер для Id поля, так как Id я думаю меняться пока не будует
     * остальные переменные создал и геттеры и сеттеры*/
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public int getId() {
         return id;
     }
 
-        public String getUsername() {
+    public String getUsername() {
         return username;
     }
 

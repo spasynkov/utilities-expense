@@ -4,10 +4,10 @@ import java.util.Date;
 
 public class GasDataSet {
 
-    private int id;
+    private Integer id;
     private String user;
     private Date time;
-    private float value;
+    private Float value;
 
     public GasDataSet(int id, String user, Date time, float value) {
         this.id = id;
@@ -16,8 +16,14 @@ public class GasDataSet {
         this.value = value;
     }
 
+    public GasDataSet(){}
+
     public int getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUser() {
@@ -40,7 +46,7 @@ public class GasDataSet {
         return value;
     }
 
-    public void setValue(float value) {
+    public void setValue(Float value) {
         this.value = value;
     }
 }

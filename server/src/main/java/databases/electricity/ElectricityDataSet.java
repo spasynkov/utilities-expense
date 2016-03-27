@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class ElectricityDataSet {
 
-    private int id;
+    private Integer id;
     private String user;
     private Date time;
-    private float value;
-    private float value_p;
+    private Float value;
+    private Float value_p;
 
     public ElectricityDataSet(int id, String user, Date time, float value, float value_p) {
         this.id = id;
@@ -16,6 +16,12 @@ public class ElectricityDataSet {
         this.time = time;
         this.value = value;
         this.value_p = value_p;
+    }
+
+    public ElectricityDataSet(){}
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public int getId() {
@@ -42,7 +48,7 @@ public class ElectricityDataSet {
         return value;
     }
 
-    public void setValue(float value) {
+    public void setValue(Float value) {
         this.value = value;
     }
 
@@ -50,7 +56,7 @@ public class ElectricityDataSet {
         return value_p;
     }
 
-    public void setValue_p(float value_p) {
+    public void setValue_p(Float value_p) {
         this.value_p = value_p;
     }
 }

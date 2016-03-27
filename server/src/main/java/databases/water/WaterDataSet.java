@@ -4,16 +4,22 @@ import java.util.Date;
 
 public class WaterDataSet {
 
-    private int id;
+    private Integer id;
     private String user;
     private Date time;
-    private float value;
+    private Float value;
 
     public WaterDataSet(int id, String user, Date time, float value) {
         this.id = id;
         this.user = user;
         this.time = time;
         this.value = value;
+    }
+
+    public WaterDataSet(){}
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public int getId() {
@@ -40,7 +46,7 @@ public class WaterDataSet {
         return value;
     }
 
-    public void setValue(float value) {
+    public void setValue(Float value) {
         this.value = value;
     }
 }
